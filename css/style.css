@@ -1,0 +1,43 @@
+body{
+    background-color: gray;
+}
+
+Header{
+    width: 100;
+    background-color:rgb(47, 4, 58);
+    margin-bottom: 20px;
+}
+
+.jl{
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    justify-content: space-around;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.titulo{
+    color: white;
+    font-size: 30px;
+    height: 100px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.j{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+ img{
+    width: 100px;
+    height: 100px;
+ }   
