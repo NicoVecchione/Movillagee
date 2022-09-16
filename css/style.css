@@ -1,43 +1,195 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: gray;
+    background-color:rgb(18, 8, 34);
 }
 
-Header{
-    width: 100;
-    background-color:rgb(47, 4, 58);
-    margin-bottom: 20px;
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    border: solid 1px black;
+    border: 0%;
+    background-color: rgba(112, 94, 94, 0.247);
+    justify-content: space-between;
+    
 }
 
-.jl{
-    width: 90%;
-    margin: auto;
+
+.logotit{
+    height: 100%;
     font-size: 20px;
     display: flex;
-    justify-content: right;
+    flex-direction: row;
     justify-content: space-around;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    align-items: center;
+}
+
+.logohead{
+    height: 80px;
+    margin-left: 30px;
+    margin-right: 30px;  
 }
 
 .titulo{
-    color: white;
+    color:  rgb(236, 189, 118);
     font-size: 30px;
     height: 100px;
     display: flex;
     flex-wrap:wrap;
     align-items: center;
     text-decoration: none;
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 
-.j{
-    text-decoration: none;
-    color: white;
+.navegacion{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50%;
+    width: 50%;
+    margin-right: 5%;
+}
 
+.navegHome{
+    text-decoration: none;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 40px;
+    font-size: 18px;
+    padding: 2%;
+}
+.navegHome:hover{
+    background-color:rgb(18, 8, 34);
+}
+.navegGeneros{
+    text-decoration: none;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 40px;
+    font-size: 18px;
+    padding: 2%;
+}
+.navegGeneros:hover{
+    background-color:rgb(18, 8, 34);
+}
+.navegFavs{
+    text-decoration: none;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 40px;
+    font-size: 18px;
+    padding: 2%;
+}
+.navegFavs:hover{
+    background-color:rgb(18, 8, 34);
+}
+.busqueda{
+    height: 10%;
+    padding: 1%;
+}
+.buscador{
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgb(18, 8, 34);
+    border-radius: 40px;
+    font-size: 14px;
+    height: 30px;
+    width: 70%;
+    padding: 4% 1%;
+    color: gray;
+}
+.botonbuscador{
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgb(18, 8, 34);
+    border-radius: 20px;
+    font-size: 14px;
+    height: 30px;
+    color:gray;
+    border-color: transparent;
+  
 }
  img{
     width: 100px;
     height: 100px;
  }   
+main{
+    margin-top: 45px;
+    
+}
+h2{
+    color:  rgb(236, 189, 118);
+    height: 10px;
+    font-size: 20px;
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+ }
+
+.populares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    color:  rgb(236, 189, 118);
+    height: 400px;
+    
+}
+.popu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    font-size: 17px;
+    
+}
+.spider{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ footer{
+    background-color:rgba(112, 94, 94, 0.247); 
+    height: 100px;
+ }
+ .nosotros{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    padding-top: 10px;
+ }
