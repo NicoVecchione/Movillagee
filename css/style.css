@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     background-color:rgb(18, 8, 34);
 }
@@ -18,7 +19,6 @@ header{
     
 }
 
-
 .logotit{
     height: 100%;
     font-size: 20px;
@@ -29,7 +29,8 @@ header{
 }
 
 .logohead{
-    height: 80px;
+    height: 70px;
+    width: 95px;
     margin-left: 30px;
     margin-right: 30px;  
 }
@@ -64,9 +65,11 @@ header{
     font-size: 18px;
     padding: 2%;
 }
+
 .navegHome:hover{
     background-color:rgb(18, 8, 34);
 }
+
 .navegGeneros{
     text-decoration: none;
     color:  rgb(236, 189, 118);
@@ -75,9 +78,11 @@ header{
     font-size: 18px;
     padding: 2%;
 }
+
 .navegGeneros:hover{
     background-color:rgb(18, 8, 34);
 }
+
 .navegFavs{
     text-decoration: none;
     color:  rgb(236, 189, 118);
@@ -86,13 +91,16 @@ header{
     font-size: 18px;
     padding: 2%;
 }
+
 .navegFavs:hover{
     background-color:rgb(18, 8, 34);
 }
+
 .busqueda{
     height: 10%;
     padding: 1%;
 }
+
 .buscador{
     font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:rgb(18, 8, 34);
@@ -103,6 +111,7 @@ header{
     padding: 4% 1%;
     color: gray;
 }
+
 .botonbuscador{
     font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:rgb(18, 8, 34);
@@ -110,17 +119,19 @@ header{
     font-size: 14px;
     height: 30px;
     color:gray;
-    border-color: transparent;
-  
+    border-color: transparent;  
 }
- img{
+
+img{
     width: 100px;
     height: 100px;
- }   
+}
+
 main{
     margin-top: 45px;
     
 }
+
 h2{
     color:  rgb(236, 189, 118);
     height: 10px;
@@ -131,7 +142,7 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     
- }
+}
 
 .populares{
     display: flex;
@@ -143,6 +154,7 @@ h2{
     height: 400px;
     
 }
+
 .popu{
     display: flex;
     flex-wrap: wrap;
@@ -151,10 +163,11 @@ h2{
     font-size: 17px;
     
 }
+
 .spider{
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
+    height: 270px;
     width: 200px;
 }
 
@@ -162,6 +175,7 @@ footer{
     background-color:rgba(112, 94, 94, 0.247); 
     height: 100px;
 }
+
 .nosotros{
     display: flex;
     flex-wrap:wrap;
@@ -183,15 +197,14 @@ body{
 }
 
 .imagen{
-    margin-top: 30px;
     width: 380px;
+    height: 460px;
 }
 
 .contenedor-padre{
     display: flex;
     width: 100%;
-    margin-top: -20px;
-
+    margin-top: 20px;
 }
 
 .contenedor-imagen{
@@ -201,7 +214,6 @@ body{
 
 .contenedor-texto{
     width: 80%;
-    margin-top: 60px;
     margin-left: -20px;
     margin-right: 30px;
     align-items: end;
@@ -209,6 +221,7 @@ body{
 }
 
 .estrellas{
+    height: 18px;
     width: 75px;
     margin-left: 5px;
 }
@@ -218,12 +231,34 @@ span{
 }
 
 .trailer{
-    width: 190px;
+    width: 225px;
+    height: 40px;
     margin-left: -10px;
     margin-top: 5px;
 }
 
 .titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.imagen2{
+    width: 380px;
+    height: 495px;
+    margin-top: -20px;
+}
+
+.contenedor-texto2{
+        width: 80%;
+        margin-left: -20px;
+        margin-right: 30px;
+        align-items: end;
+        flex-wrap: wrap;
+        margin-top: -20px;
+}
+
+.titulo-genero{
     display: flex;
     justify-content: center;
     font-size: 40px;
