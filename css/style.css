@@ -158,33 +158,11 @@ h2{
     width: 200px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- footer{
+footer{
     background-color:rgba(112, 94, 94, 0.247); 
     height: 100px;
- }
- .nosotros{
+}
+.nosotros{
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -192,4 +170,61 @@ h2{
     font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12px;
     padding-top: 10px;
- }
+}
+
+.logo{
+    width: 100px;
+}
+
+body{
+    color: rgb(236, 189, 118)    ;
+    font-family: 'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(18, 8, 34);
+}
+
+.imagen{
+    margin-top: 30px;
+    width: 380px;
+}
+
+.contenedor-padre{
+    display: flex;
+    width: 100%;
+    margin-top: -20px;
+
+}
+
+.contenedor-imagen{
+    width: 50%;
+    padding: 20px;
+}
+
+.contenedor-texto{
+    width: 80%;
+    margin-top: 60px;
+    margin-left: -20px;
+    margin-right: 30px;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.estrellas{
+    width: 75px;
+    margin-left: 5px;
+}
+
+span{
+    color: gray;
+}
+
+.trailer{
+    width: 190px;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
