@@ -5,7 +5,7 @@
 body{
     background-color:rgb(18, 8, 34);
 }
-
+/* Header */
 header{
     display: flex;
     flex-direction: row;
@@ -126,10 +126,9 @@ img{
     width: 100px;
     height: 100px;
 }
-
+/* Main */
 main{
-    margin-top: 45px;
-    
+    margin-top: 80px;
 }
 
 h2{
@@ -149,9 +148,9 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-
     color:  rgb(236, 189, 118);
     height: 400px;
+    padding: 50px;
     
 }
 
@@ -164,7 +163,7 @@ h2{
     
 }
 
-.spider{
+.pelis{
     display: flex;
     flex-wrap: wrap;
     height: 270px;
