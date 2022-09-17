@@ -161,7 +161,7 @@ h2{
     flex-direction: column;
     text-align: center;
     font-size: 17px;
-    
+    margin: 0px;
 }
 
 .pelis{
@@ -268,10 +268,15 @@ span{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 500px;
+    margin-top: 80px;
+}
+
+.peli-accion{
     height: 200px;
 }
 
 .img-accion{
     width: 150px;
-    height: 800;
+    height: 190px;
 }
