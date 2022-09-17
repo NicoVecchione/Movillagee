@@ -123,9 +123,8 @@ header{
     border-color: transparent;  
 }
 
-img{
-    width: 100px;
-    height: 100px;
+.logohead{
+    width: 95px;
 }
 /* Main */
 main{
@@ -170,12 +169,50 @@ h2{
     height: 270px;
     width: 200px;
 }
-
+/* Footer */
 footer{
     background-color:rgba(112, 94, 94, 0.247); 
-    height: 100px;
-}
+    height: 300px;
+    flex-wrap: wrap;
+   align-items: center;
+    flex-direction: column;
 
+}
+.principalFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.imgfooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70px;
+    margin: 17px;
+}
+.titfooter{
+    color:  rgb(236, 189, 118);
+    font-size: 50px;
+    height: 100px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    text-decoration: none;
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.redesfoot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logoredes{
+    height: 80px;
+    width: 80px;
+
+}
+.secundarioFooter{
+
+}
 .nosotros{
     display: flex;
     flex-wrap:wrap;
@@ -186,6 +223,8 @@ footer{
     padding-top: 10px;
 }
 
+    
+/* Termina footer */
 .logo{
     width: 100px;
 }
