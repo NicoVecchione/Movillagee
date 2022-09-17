@@ -81,6 +81,7 @@ header{
 
 .navegGeneros:hover{
     background-color:rgb(18, 8, 34);
+
 }
 
 .navegFavs{
@@ -245,7 +246,7 @@ span{
 .imagen2{
     width: 380px;
     height: 495px;
-    margin-top: -20px;
+    margin-top: -45px;
 }
 
 .contenedor-texto2{
@@ -254,11 +255,23 @@ span{
         margin-right: 30px;
         align-items: end;
         flex-wrap: wrap;
-        margin-top: -20px;
+        margin-top: -40px;
 }
 
 .titulo-genero{
     display: flex;
     justify-content: center;
     font-size: 40px;
+}
+
+.genero-accion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 200px;
+}
+
+.img-accion{
+    width: 150px;
+    height: 800;
 }
