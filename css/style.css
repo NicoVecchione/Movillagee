@@ -263,6 +263,7 @@ body{
     height: 18px;
     width: 75px;
     margin-left: 5px;
+    margin-bottom: -2px;
 }
 
 span{
@@ -303,12 +304,20 @@ span{
     font-size: 40px;
 }
 
-.genero-accion{
+.genero-accion1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 500px;
-    margin-top: 80px;
+    height: 230px;
+    margin: 50px;
+}
+
+.genero-accion2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 230px;
+    margin: 50px;
 }
 
 .peli-accion{
@@ -323,4 +332,11 @@ span{
 
 .texto-accion{
     margin: 50px;
+}
+
+.mejores-pelis{
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    margin-bottom: -5px;
 }
