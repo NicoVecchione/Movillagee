@@ -238,6 +238,17 @@ footer{
 
     
 /* Termina footer */
+@media (max-width:420px) {
+    .logohead{
+        height: 50%;
+        width: 60px;
+        margin-left: 15px;
+        margin-right: 15px;  
+    }
+    .titulo{
+        font-size: 7px;
+    }
+}
 .logo{
     width: 100px;
 }
