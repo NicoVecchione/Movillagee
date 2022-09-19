@@ -268,12 +268,14 @@ body{
     display: flex;
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .contenedor-padre-serie{
     display: flex;
     width: 100%;
     margin-top: 62px;
+    margin-bottom: 15px;
 }
 
 .contenedor-imagen{
@@ -283,7 +285,7 @@ body{
 
 .contenedor-texto{
     width: 80%;
-    margin-left: -50px;
+    margin-left: -70px;
     margin-right: 30px;
     align-items: end;
     flex-wrap: wrap;
