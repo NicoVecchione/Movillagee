@@ -403,3 +403,12 @@ span{
     height: 270px;
     width: 200px;
 }
+.contenedor-peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 200px;
+}
+.contenedor-peliculas img {
+    width: 200px;
+    height: 400px;
+}
