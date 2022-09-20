@@ -164,7 +164,7 @@ h2{
 /* Footer */
 footer{
     background-color:rgba(112, 94, 94, 0.247); 
-    height: 155px;
+    height: 30vh;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
@@ -174,52 +174,57 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 20px;
+    height: 4vh;
     
 }
 .imgfooter{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 50px;
+    height: 8vh;
+    margin: 17px;
+}
+.imgfooter2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 8vh;
     margin: 17px;
 }
 .titfooter{
     color:  rgb(236, 189, 118);
     font-size: 30px;
-    height: 100px;
     display: flex;
     flex-wrap:wrap;
     align-items: center;
     text-decoration: none;
     font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.redesfoot{
+.contacto{
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 10px;
-    margin-top: 65px;
+    margin-top: 55px;
 }
-
-.mail{
-    height: 40px;
-    width: 40px;
-    margin-top: -4px;
+.ayudafoot{
+    text-decoration: none;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
 }
-
-.instagram{
-    height: 33px;
-}
-
-.telefono{
-    height: 40px;
+.contactofoot{
+    text-decoration: none;
+    color:  rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin-left: 2%;
 }
 
 .secundarioFooter{
-    height: 40px;
-    margin-top: 35px;
+    margin-top: 25px;
 }
+
 .nosotros{
     display: flex;
     flex-wrap:wrap;
@@ -228,7 +233,12 @@ footer{
     font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
 }
-
+.sarasa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px; 
+}
     
 /* Termina footer */
 .logo{
@@ -447,69 +457,6 @@ span{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Media queries */
 @media (max-width:420px) {
     header{
@@ -564,6 +511,7 @@ span{
         height: 40vh;
         width: 100%;
     }
+    /* #ResonsiveFavs */
     .mainFavs{
         margin-top: 10%;
     }
@@ -579,6 +527,7 @@ span{
         padding-top: 0%;
         padding-left: 6%;
         padding-right: 3%;
+        height: 100vh;
     }
     .Favstodas{
         flex-direction: column;
@@ -588,6 +537,44 @@ span{
     .pelisFavs{
         height: 40vh;
         width: 100%;
+    }
+    /* #Responsive Footer */
+    .imgfooter2{
+        display: none;
+    }
+    .principalFooter{
+        justify-content: flex-start;
+        height: 2vh;
+    }
+    .imgfooter{
+        height: 8vh;
+        width: 13vw;
+    }
+    .titfooter{
+        font-size: 20px;
+    }
+    .contacto{
+        justify-content: flex-start;
+        padding-left: 25px;
+        margin-top: 15%;
+    }
+    .ayudafoot{
+        font-size: 14px;
+    }
+    .contactofoot{
+        font-size: 14px;
+    }
+    .secundarioFooter{
+        margin-top: 6%;
+    }
+
+    .nosotros{
+        justify-content: flex-start;
+        font-size: 12px;
+        padding-left:25px;
+    }
+    .sarasa{
+        font-size: 10px;
     }
 
 
