@@ -292,6 +292,7 @@ body{
 
 .logo-favoritos{
     height: 50px;
+    background-color: rgb(21, 21, 70);
 }
 .logo-favoritos:hover{
     background-color: rgba(63, 201, 155, 0.5);
@@ -577,6 +578,36 @@ span{
         font-size: 10px;
     }
 
+    .contenedor-padre{
+        flex-direction: column;
+    }
 
+    .contenedor-texto{
+        margin: 0px;
+    }
+
+    .contenedor-padre-serie{
+        flex-direction: column;
+    }
+
+    .contenedor-texto2{
+        margin: 0px;
+    }
+
+    .genero-accion1{
+        padding: 2px;
+        flex-wrap: wrap;
+        margin-bottom: 300px;
+    }
+
+    .peli-accion{
+        margin-bottom: 50px;
+    }
+
+    .genero-accion2{
+        flex-wrap: wrap;
+        margin-top: 520px;
+        margin-bottom: 550px;
+    }
 
 }
