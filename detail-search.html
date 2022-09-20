@@ -5,26 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="contenedor-header">
-        <a href="home">
-            <img class="logo" src="logo.png" alt="logo">
-        </a>
-        <h4>Peliculas populares</h4>
-        <h4>Series populares</h4>
-        <h4>Peliculas mas valoradas</h4>
-        <h4>Generos</h4>
+    <header>
+        <nav class="logotit">
+            <img class="logohead" src="./img/logo.png" alt="Logo Movi">
+            <a class="titulo" href="./index.html"> MOVILLAGE</a>
+        </nav>
+
+        <nav class="navegacion">
+            <a class="navegHome" href="./index.html">Home</a>
+            <a class="navegGeneros" href="./genre.html">Géneros</a>
+            <a class="navegFavs" href="./favorites.html">Favoritos</a>
+            <form class="busqueda" action="detail-search.html" method="get">
+                <input class="buscador" type="text" name="Buscador" value="" placeholder=" Iniciar busqueda">
+                <button class="botonbuscador" type="submit"> Buscar</button>
+            </form>
+        </nav>
     </header>
+    <h3>Los resultados de busqueda para el termino Spiderman son:</h3>
     <main>
-        <h3>Los resultados de busqueda para el termino Spiderman son:</h3>
-        <div class="contenedor-peliculas">
-            <div>
-                <a href="spiderman"><img src="spiderman.jpg" width="100px" height="200px"></a>
-                <h7>Spiderman</h7>
-            </div>
-        </div>
+        <section class="populares">
+            <article class="popu">
+                <a href="./detail-movie.html"><img class="pelis" src="./img/spiderman.jpg" alt="Spider"></a>
+                <h3>Spiderman</h3>
+            </article>
+            <article class="popu">
+                <a href="./detail-movie.html"><img class="pelis" src="./img/spiderman2.jpg" alt="Spider2"></a>
+                <h3>Spiderman 2</h3>
+            </article>
+            <article class="popu">
+                <a href="./detail-movie.html"><img class="pelis" src="./img/spiderman3.jpg" alt="Spider3"></a>
+                <h3>Spiderman 3</h3>
+            </article>
+        </section>
     </main>
+    <footer>
+        <nav class="principalFooter">
+            <img class="imgfooter" src="./img/logo.png" alt="Logo Movi">
+            <a class="titfooter" href="./index.html">MOVILLAGE</a>
+            <img class="imgfooter" src="./img/logo.png" alt="Logo Movi">
+        </nav>
+
+        <nav class="redesfoot">
+            <img class="mail" src="./img/logo-mail.png" alt="Mail">
+            <img class="instagram" src="./img/logo-instagram.png" alt="Instagram">
+        </nav>
+        <nav class="secundarioFooter">
+            <p class="nosotros">Felipe Antelme | Nicolas Vecchione | Mateo Lavandeira</p>
+        </nav>
+    </footer>
 </body>
 </html>
