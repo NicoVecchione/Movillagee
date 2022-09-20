@@ -12,7 +12,6 @@ header{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 80px;
     border: solid 1px black;
     border: 0%;
     background-color: rgba(112, 94, 94, 0.247);
@@ -29,8 +28,6 @@ header{
 }
 
 .logohead{
-    height: 70px;
-    width: 95px;
     margin-left: 30px;
     margin-right: 30px;  
 }
@@ -38,7 +35,7 @@ header{
 .titulo{
     color:  rgb(236, 189, 118);
     font-size: 20px;
-    height: 100px;
+    height: 15vh;
     display: flex;
     flex-wrap:wrap;
     align-items: center;
@@ -52,7 +49,6 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    height: 50%;
     width: 50%;
     margin-right: 5%;
 }
@@ -98,7 +94,6 @@ header{
 }
 
 .busqueda{
-    height: 10%;
     padding: 1%;
 }
 
@@ -163,8 +158,6 @@ h2{
 }
 
 .pelis{
-    display: flex;
-    flex-wrap: wrap;
     height: 270px;
     width: 200px;
 }
@@ -238,17 +231,6 @@ footer{
 
     
 /* Termina footer */
-@media (max-width:420px) {
-    .logohead{
-        height: 50%;
-        width: 60px;
-        margin-left: 15px;
-        margin-right: 15px;  
-    }
-    .titulo{
-        font-size: 7px;
-    }
-}
 .logo{
     width: 100px;
 }
@@ -403,7 +385,7 @@ span{
     flex-wrap: wrap;
     justify-content:space-evenly;
     align-items: center;
-    height: 400px;
+    height: 60vh;
 
 }
 .Favstodas{
@@ -414,11 +396,11 @@ span{
     
 }
 .pelisFavs{
-    display: flex;
-    flex-wrap: wrap;
     height: 270px;
     width: 200px;
 }
+/* Termina Favoritos */
+
 .contenedor-peliculas {
     display: flex;
     flex-wrap: wrap;
@@ -427,4 +409,177 @@ span{
 .contenedor-peliculas img {
     width: 200px;
     height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media (max-width:420px) {
+    header{
+        height: 30vh;
+    }
+    .logohead{
+        height: 15vh;
+        width: 65%;
+        margin-left: 15px;
+        margin-right: 15px;  
+    }
+    .titulo{
+        display: none;
+    }
+    .navegHome{
+        font-size: 15px;
+    }
+    .navegGeneros{
+        font-size: 15px;
+    }
+    .navegFavs{
+        font-size: 15px;
+    }
+    .buscador{
+        height: 7vh;
+        font-size: 13px;
+    }
+    .botonbuscador{
+        font-size: 13px;
+        height: 7vh;
+    }
+    .mainHome{
+        margin-top: 10%;
+    }
+    h2{
+        font-size: 15px;
+
+    }
+    .populares{
+        justify-content: center;
+        padding-top: 5%;
+        padding-left: 6%;
+        padding-right: 3%;
+    }
+    .popu{
+        flex-direction: column;
+        font-size: 13px;
+        margin: 3px;
+    }
+    
+    .pelis{
+        height: 40vh;
+        width: 100%;
+    }
+    .mainFavs{
+        margin-top: 10%;
+    }
+    .FavsTitulo{
+        font-size: 18px;
+    }
+    .PelisFavsTitulo{
+        font-size: 15px;
+        margin-left: 12%;
+    }
+    .FavsPelis{
+        justify-content: center;
+        padding-top: 0%;
+        padding-left: 6%;
+        padding-right: 3%;
+    }
+    .Favstodas{
+        flex-direction: column;
+        font-size: 13px;
+        margin: 3px;
+    }
+    .pelisFavs{
+        height: 40vh;
+        width: 100%;
+    }
+
+
+
 }
