@@ -19,7 +19,6 @@ header{
 }
 
 .logotit{
-    height: 100%;
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -35,7 +34,7 @@ header{
 .titulo{
     color:  rgb(236, 189, 118);
     font-size: 20px;
-    height: 15vh;
+    height: 8vh;
     display: flex;
     flex-wrap:wrap;
     align-items: center;
@@ -373,13 +372,6 @@ span{
     margin: 50px;
 }
 
-.mejores-pelis{
-    display: flex;
-    justify-content: left;
-    margin-left: 20px;
-    margin-bottom: -5px;
-}
-
 /* FAVORITOS */
 .mainFavs{
     margin-top: 65px;
@@ -447,7 +439,7 @@ span{
 }
 
 .titulos-genero{
-    font-size: 40px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
 }
@@ -455,6 +447,11 @@ span{
 .generos-container a {
     text-decoration: none;
     color: rgb(236, 189, 118);
+}
+.cansado{
+    margin-top: 3%;
+    font-size: 15px;
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -464,6 +461,7 @@ span{
 
 /* Media queries */
 @media (max-width:420px) {
+    /* Header */
     header{
         height: 30vh;
     }
@@ -493,6 +491,7 @@ span{
         font-size: 13px;
         height: 7vh;
     }
+    /* Home */
     .mainHome{
         margin-top: 10%;
     }
@@ -586,15 +585,14 @@ span{
         font-size: 10px;
         padding-bottom: 4%;
     }
-
+/* Detalle Movie */
     .contenedor-padre{
         flex-direction: column;
     }
-
     .contenedor-texto{
         margin: 0px;
     }
-
+/* Detalle Serie */
     .contenedor-padre-serie{
         flex-direction: column;
     }
@@ -603,6 +601,30 @@ span{
         margin: 0px;
     }
     
+/* Detail Genres */
+    .genero-accion1,.genero-accion2 {
+        flex-wrap: wrap;
+        height: 200vh;
+        margin: 7%;
+        
+    }
+    .titulo-genero{
+        font-size: 18px;
+        padding-top: 5%;
+        padding-left: 6%;
+        padding-right: 3%;
+    }
+    .peli-accion{
+        font-size: 13px;
+    }
+    .texto-accion{
+        font-size: 13px;
+    }
+    .mejores-pelis{
+        font-size: 15px;
+    }
+
+
     .generos {
         display: flex;
         flex-direction: column;
@@ -611,10 +633,8 @@ span{
     .generos a {
         font-size: 50px;
     }
-
-    .genero-accion1,.genero-accion2 {
-        flex-wrap: wrap;
-        height: 200vh;
+    .cansado{
+        font-size: 13px;
     }
-
+    
 }
