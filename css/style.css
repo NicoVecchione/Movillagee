@@ -432,6 +432,22 @@ span{
     height: 400px;
 }
 
+.generos {
+    display: flex;
+    flex-direction: column;
+}
+
+.generos a {
+    text-decoration: none;
+    color: rgb(236, 189, 118);
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+
 
 
 
@@ -593,21 +609,19 @@ span{
     .contenedor-texto2{
         margin: 0px;
     }
-
-    .genero-accion1{
-        padding: 2px;
-        flex-wrap: wrap;
-        margin-bottom: 300px;
+    
+    .generos {
+        display: flex;
+        flex-direction: column;
     }
 
-    .peli-accion{
-        margin-bottom: 50px;
+    .generos a {
+        font-size: 50px;
     }
 
-    .genero-accion2{
+    .genero-accion1,.genero-accion2 {
         flex-wrap: wrap;
-        margin-top: 520px;
-        margin-bottom: 550px;
+        height: 200vh;
     }
 
 }
