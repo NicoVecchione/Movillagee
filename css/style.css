@@ -434,18 +434,28 @@ span{
 
 .generos {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.generos a {
+.generos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulos-genero{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.generos-container a {
     text-decoration: none;
     color: rgb(236, 189, 118);
-    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 150px;
-    margin-left: 20px;
-    margin-bottom: 10px;
 }
-
 
 
 
