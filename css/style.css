@@ -462,28 +462,6 @@ span{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Media queries */
 @media (max-width:420px) {
     header{
@@ -539,6 +517,9 @@ span{
         width: 100%;
     }
     /* #ResonsiveFavs */
+    footer{
+        height: 33vh;
+    }
     .mainFavs{
         margin-top: 10%;
     }
@@ -590,11 +571,12 @@ span{
     }
     .contactofoot{
         font-size: 14px;
+        
     }
     .secundarioFooter{
         margin-top: 6%;
+    
     }
-
     .nosotros{
         justify-content: flex-start;
         font-size: 12px;
@@ -602,6 +584,7 @@ span{
     }
     .sarasa{
         font-size: 10px;
+        padding-bottom: 4%;
     }
 
     .contenedor-padre{
