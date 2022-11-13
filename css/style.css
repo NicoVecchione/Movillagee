@@ -136,8 +136,7 @@ h2{
     justify-content: center;
     
 }
-
-.populares{
+.lanzamientos{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -147,6 +146,24 @@ h2{
     
 }
 
+.seriePopulares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color:  rgb(236, 189, 118);
+    padding: 50px;
+    
+}
+.pelisPopulares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color:  rgb(236, 189, 118);
+    padding: 50px;
+    
+}
 .popu{
     display: flex;
     flex-wrap: wrap;
