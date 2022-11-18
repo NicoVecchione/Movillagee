@@ -1,19 +1,27 @@
 // FORMULARIO
-// Que el término buscado tenga al menos 3 caracteres. Si no los tiene avisar por pantalla al usuario.
-// Los mensajes de error deben desaparecer si el usuario vuelve a entrar al campo de búsqueda.
+
 let buscador = document.querySelector(".buscador")
 
-// Que no se mande si no hay nada en el campo
 let formulario = document.querySelector(".busqueda")
+let error = document.querySelector(".error")
 formulario.addEventListener("submit", function(event){
     event.preventDefault()
+    // Que no se mande si no hay nada en el campo
     if(buscador.value == ""){
-        alert("Complete la busqueda para iniciarla")
-    } else {
+        error.innerText ="Complete la busqueda!"
+            // Mensaje de error desaparece
+            buscador.addEventListener("focus", function(){
+                error.innerText = null
+    // Que tenga al menos 3 caracteres
+    }) } else if (buscador.value.length < 3 && buscador.value !== ""){
+        error.innerText= "Debe introducir minimo 3 caracteres";
+            // Mensaje de error desaparece
+            buscador.addEventListener("focus", function(){
+                error.innerText = null
+    }) } else {
         this.submit()
     }
 })
-
 
 // ULTIMOS LANZAMIENTOS
 let url_lanzamiento = "https://api.themoviedb.org/3/movie/top_rated?api_key=e3f1ae8bae04c04c63af7b6996decd02&language=en-US&page=1"
@@ -32,7 +40,7 @@ fetch(url_lanzamiento)
         for(let i=0; i<todos_lanzamientos.length; i++){
             pelis_lanzamientos += `<article class= "popu">
                                             <a href="detalle.html?id=${todos_lanzamientos[i].id}"><img class="pelis" src=${urlimg + todos_lanzamientos[i].poster_path} alt=${todos_lanzamientos[i].original_title}></a>
-                                            <p> ${todos_lanzamientos[i].original_title} </p>
+                                            <strong> ${todos_lanzamientos[i].original_title} </strong>
                                             <p class="estreno"> ${todos_lanzamientos[i].release_date} </p>
                                     </article>`
                                         
@@ -61,7 +69,7 @@ fetch(url_SeriePopu)
         for(let i=0; i<todos_SeriePopu.length; i++){
             series_populares += `<article class= "popu">
                                             <a href="detalle.html?id=${todos_SeriePopu[i].id}"><img class="pelis" src=${urlimg + todos_SeriePopu[i].poster_path} alt=${todos_SeriePopu[i].name}></a>
-                                            <p> ${todos_SeriePopu[i].name} </p>
+                                            <strong> ${todos_SeriePopu[i].name} </strong>
                                             <p class="estreno"> ${todos_SeriePopu[i].first_air_date} </p>
                                     </article>`
                                         
@@ -89,7 +97,7 @@ fetch(url_PelisPopu)
         for(let i=0; i<todos_PelisPopu.length; i++){
             pelis_populares += `<article class= "popu">
                                             <a href="detalle.html?id=${todos_PelisPopu[i].id}"><img class="pelis" src=${urlimg + todos_PelisPopu[i].poster_path} alt=${todos_PelisPopu[i].original_title}></a>
-                                            <p> ${todos_PelisPopu[i].original_title} </p>
+                                            <strong> ${todos_PelisPopu[i].original_title} </strong>
                                             <p class="estreno"> ${todos_PelisPopu[i].release_date} </p>
                                     </article>`
                                         

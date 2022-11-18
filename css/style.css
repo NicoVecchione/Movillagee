@@ -656,6 +656,10 @@ span{
     
 }
 
-.estreno{
+/* .estreno{
     margin-top: 0px;
+} */
+
+.error{
+    font-size: 13px;
 }
