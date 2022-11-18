@@ -34,7 +34,7 @@ header{
 .titulo{
     color:  rgb(236, 189, 118);
     font-size: 20px;
-    height: 8vh;
+    height: 7vh;
     display: flex;
     flex-wrap:wrap;
     align-items: center;
@@ -654,4 +654,8 @@ span{
         font-size: 13px;
     }
     
+}
+
+.estreno{
+    margin-top: 0px;
 }
