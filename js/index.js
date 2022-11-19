@@ -39,7 +39,7 @@ fetch(url_lanzamiento)
 
         for(let i=0; i<todos_lanzamientos.length; i++){
             pelis_lanzamientos += `<article class= "popu">
-                                            <a href="detalle.html?id=${todos_lanzamientos[i].id}"><img class="pelis" src=${urlimg + todos_lanzamientos[i].poster_path} alt=${todos_lanzamientos[i].original_title}></a>
+                                            <a href="detail-movie.html?id=${todos_lanzamientos[i].id}"><img class="pelis" src=${urlimg + todos_lanzamientos[i].poster_path} alt=${todos_lanzamientos[i].original_title}></a>
                                             <strong> ${todos_lanzamientos[i].original_title} </strong>
                                             <p class="estreno"> ${todos_lanzamientos[i].release_date} </p>
                                     </article>`
@@ -68,7 +68,7 @@ fetch(url_SeriePopu)
 
         for(let i=0; i<todos_SeriePopu.length; i++){
             series_populares += `<article class= "popu">
-                                            <a href="detalle.html?id=${todos_SeriePopu[i].id}"><img class="pelis" src=${urlimg + todos_SeriePopu[i].poster_path} alt=${todos_SeriePopu[i].name}></a>
+                                            <a href="detail-serie.html?id=${todos_SeriePopu[i].id}"><img class="pelis" src=${urlimg + todos_SeriePopu[i].poster_path} alt=${todos_SeriePopu[i].name}></a>
                                             <strong> ${todos_SeriePopu[i].name} </strong>
                                             <p class="estreno"> ${todos_SeriePopu[i].first_air_date} </p>
                                     </article>`
@@ -96,7 +96,7 @@ fetch(url_PelisPopu)
 
         for(let i=0; i<todos_PelisPopu.length; i++){
             pelis_populares += `<article class= "popu">
-                                            <a href="detalle.html?id=${todos_PelisPopu[i].id}"><img class="pelis" src=${urlimg + todos_PelisPopu[i].poster_path} alt=${todos_PelisPopu[i].original_title}></a>
+                                            <a href="detail-movie.html?id=${todos_PelisPopu[i].id}"><img class="pelis" src=${urlimg + todos_PelisPopu[i].poster_path} alt=${todos_PelisPopu[i].original_title}></a>
                                             <strong> ${todos_PelisPopu[i].original_title} </strong>
                                             <p class="estreno"> ${todos_PelisPopu[i].release_date} </p>
                                     </article>`
