@@ -97,13 +97,15 @@ fetch(url_plataformas)
 //FAVORITOS
 let favoritos = []
 
+// Esto es para saber si ya hay datos de favoritos
+    //Recupero el local storage con la propiedad "pelisfavoritas"
 let recuperoStorage = localStorage.getItem("pelisfavoritas")
-if(recuperoStorage){
+    // Si hay algo en el local storage, lo tranformo en array y lo guardo en favoritos
+if(recuperoStorage !== null){
     favoritos = JSON.parse(recuperoStorage) 
 }
-
+    // Para cambiar el texto del boton si el id ya esta en favoritos
 let botonfavs = document.querySelector(".logo-favoritos");
-
 if (favoritos.includes(id)){
     botonfavs.innerText = "Sacar de Favoritos"
 }
@@ -118,8 +120,10 @@ botonfavs.addEventListener("click", function(){
         botonfavs.innerText = "Sacar de Favoritos";
 
     }
-
+    // Guardando datos en el Local Storage. 
+        // Primero paso el array de favoritos a formato JSON con .stringify
     let favs = JSON.stringify(favoritos)
+        //Con el metodo "setItem" agrego la propiedad "pelisfavoritas" y el valor "favs" que seria el array de favoritos al local storage
     localStorage.setItem("pelisfavoritas",favs)
     console.log(localStorage)
     

@@ -4,13 +4,13 @@ let buscador = document.querySelector(".buscador")
 
 let formulario = document.querySelector(".busqueda")
 let error = document.querySelector(".error")
-formulario.addEventListener("submit", function(event){
+formulario.addEventListener("submit", function(event){ // USO DE SUBMIT
     event.preventDefault()
     // Que no se mande si no hay nada en el campo
-    if(buscador.value == ""){
+    if(buscador.value == ""){   // Si el valor dentro del campo esta vacio...
         error.innerText ="Complete la busqueda!"
             // Mensaje de error desaparece
-            buscador.addEventListener("focus", function(){
+            buscador.addEventListener("focus", function(){ //USO DEL FOCUS (al salir del campo..)
                 error.innerText = null
     // Que tenga al menos 3 caracteres
     }) } else if (buscador.value.length < 3 && buscador.value !== ""){
