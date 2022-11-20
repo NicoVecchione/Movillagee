@@ -42,8 +42,22 @@ fetch(url)
         } else{
             edad.innerHTML = "ATP"
         }
-        
-        
+
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+let url2 = "https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=35664717fe783f635e22f58af930e36f"
+
+fetch(url2)
+    .then(function(response){
+        return response.json()
+
+    })
+    .then(function(data) {
+        console.log(data);
+        let 
 
     })
     .catch(function(error) {
