@@ -22,6 +22,9 @@ formulario.addEventListener("submit", function(event){
         this.submit()
     }
 })
+
+//DETALLE PELICULA
+
 let queryString = location.search
 let qsObject = new URLSearchParams(queryString)
 let id = qsObject.get('id')
@@ -52,9 +55,9 @@ fetch(url)
         info_peli.innerHTML += data.overview
 
         let genero = document.querySelector("#genero");
-        for(let i of data.genres){
-            genero.innerHTML += `<a href="detail-genres.html?id=${i.id}">
-            ${i.name}</a> `
+        for(let i=0; i<data.genres.length; i++){
+            genero.innerHTML += `<a href="detail-genres.html?id=${data.genres[i].id}">
+            ${data.genres[i].name}</a> `
         }
         
         let duracion = document.querySelector("#duracion");
