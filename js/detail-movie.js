@@ -1,24 +1,50 @@
-let url = "https://api.themoviedb.org/3/movie/{movie_id}?api_key=%2035664717fe783f635e22f58af930e36f&language=en-US"
+let queryString = location.search
+let qsObject = new URLSearchParams(queryString)
+let id = qsObject.get('id')
+
+let url = `https://api.themoviedb.org/3/movie/${id}?api_key=e3f1ae8bae04c04c63af7b6996decd02&language=en-US`
 
 fetch(url)
-    .then(function(res){
+    .then(function(response){
         return response.json()
 
     })
     .then(function(data) {
         console.log(data);
         let url_imagen = "https://image.tmdb.org/t/p/original"
-        let detalles = document.querySelector(".contenedor-texto")
-        let detalles_pelis = ``
+        let contenedor_imagen = document.querySelector(".contenedor-imagen")
+        contenedor_imagen.innerHTML = `<img class="imagen" src="${url_imagen + data.poster_path}">`
 
-        for (let i=0; i<2; i++){
-            detalles_pelis += `<div class="contenedor-imagen">
-            <img class="imagen" src="">${data.results[i].poster_path}</img>
-            </div>
-            `
-        }
-        detalles.innerHTML = detalles_pelis
+        let titulo_peli = document.querySelector("#titulo-peli")
+        titulo_peli.innerHTML = data.title
         
+        let rating = document.querySelector("#rating")
+        rating.innerHTML += data.vote_average
+
+        let año_estreno = document.querySelector("#año-estreno")
+        año_estreno.innerHTML += data.release_date
+
+        let info_peli = document.querySelector("#sinopsis")
+        info_peli.innerHTML += data.overview
+
+        let genero = document.querySelector("#genero")
+        for(let i of data.genres){
+            genero.innerHTML += `<a href="detail-genres.html?id=${i.id}">
+            ${i.name}</a> `
+        }
+        
+        let duracion = document.querySelector("#duracion")
+        duracion.innerHTML += data.runtime + " minutos"
+
+        let edad = document.querySelector("#edad")
+        if (data.adult === true){
+            edad.innerHTML = "+18"
+        } else{
+            edad.innerHTML = "ATP"
+        }
+        
+        
+
     })
     .catch(function(error) {
         console.log("Error: " + error);
