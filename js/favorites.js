@@ -50,9 +50,9 @@ function buscarYMostrarFavoritos(id){
         let clave = data.results
         let urlimg = "https://image.tmdb.org/t/p/original"
         listaFavs += `<article class= "Favstodas">
-                        <a href="detail-movie.html?id=${clave.id}"><img class="pelisFavs" src=${urlimg + clave.poster_path} alt=${clave.original_title}></a>
-                        <strong> ${clave.original_title} </strong>
-                        <p> ${clave.release_date} </p>
+                        <a href="detail-movie.html?id=${id}"><img class="pelisFavs" src=${urlimg + poster_path} alt=${original_title}></a>
+                        <strong> ${original_title} </strong>
+                        <p> ${release_date} </p>
                      </article>`
     })
     .catch(function(e){
