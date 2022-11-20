@@ -36,37 +36,59 @@ fetch(url)
     .then(function(data) {
         console.log(data);
         let url_imagen = "https://image.tmdb.org/t/p/original"
-        let contenedor_imagen = document.querySelector(".contenedor-imagen")
+        let contenedor_imagen = document.querySelector(".contenedor-imagen");
         contenedor_imagen.innerHTML = `<img class="imagen" src="${url_imagen + data.poster_path}">`
 
-        let titulo_peli = document.querySelector("#titulo-peli")
-        titulo_peli.innerHTML = data.title
+        let titulo_peli = document.querySelector("#titulo-peli");
+        titulo_peli.innerText = data.title
         
-        let rating = document.querySelector("#rating")
+        let rating = document.querySelector("#rating");
         rating.innerHTML += data.vote_average
 
-        let año_estreno = document.querySelector("#año-estreno")
+        let año_estreno = document.querySelector("#año-estreno");
         año_estreno.innerHTML += data.release_date
 
-        let info_peli = document.querySelector("#sinopsis")
+        let info_peli = document.querySelector("#sinopsis");
         info_peli.innerHTML += data.overview
 
-        let genero = document.querySelector("#genero")
+        let genero = document.querySelector("#genero");
         for(let i of data.genres){
             genero.innerHTML += `<a href="detail-genres.html?id=${i.id}">
             ${i.name}</a> `
         }
         
-        let duracion = document.querySelector("#duracion")
+        let duracion = document.querySelector("#duracion");
         duracion.innerHTML += data.runtime + " minutos"
 
         let edad = document.querySelector("#edad")
         if (data.adult === true){
-            edad.innerHTML = "+18"
+            edad.innerText = "+18"
         } else{
-            edad.innerHTML = "ATP"
+            edad.innerText = "ATP"
         }
 
+        
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+let url_plataformas = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=35664717fe783f635e22f58af930e36f`
+
+fetch(url_plataformas)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        let plataformas = document.querySelector("#plataformas");
+        console.log(data);
+        
+        if (data.results.AR == undefined){
+            plataformas.innerHTML += "No se encontraron plataformas"
+        }else{
+            for(let i = 0; i<data.results.AR.flatrate.length; i ++)
+                plataformas.innerHTML += data.results.AR.flatrate[i].provider_name + ", "
+        }
     })
     .catch(function(error) {
         console.log("Error: " + error);
