@@ -31,9 +31,9 @@ console.log(peliculas)
 let listaFavs = document.querySelector(".FavsPelis")
 
 // Me fijo si el array tiene elementos (pelis)
-if(peliculas == null){
+if(peliculas == null || peliculas.length == 0){
     //Si no hay favoritos
-    listaFavs.innerHTML = `<p> No tenes Favoritos </p>`
+    listaFavs.innerHTML = `<span class= firulete> No tenes Favoritos </span>`
 } else {
     //Si hay favoritos
     for(let i=0; i<peliculas.length; i++){ // El for va a ir recorriendo cada posicion del array y le aplica la funcion

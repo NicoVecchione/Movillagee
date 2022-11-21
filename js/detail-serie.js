@@ -80,7 +80,7 @@ fetch(url_plataformas)
         let plataformas = document.querySelector("#plataformas");
         console.log(data);
         
-        if (data.results.AR == undefined){
+        if (data.results.AR == null){
             plataformas.innerHTML += "No se encontraron plataformas"
         }else{
             for(let i = 0; i<data.results.AR.flatrate.length; i ++)
