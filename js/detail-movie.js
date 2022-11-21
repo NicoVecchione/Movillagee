@@ -99,12 +99,29 @@ fetch(url_plataformas)
     })
 
 // TRAILER
-    
+let urlTrailer = `https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=35664717fe783f635e22f58af930e36f&language=en-US`
+
+fetch(urlTrailer)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        listaTrailers = document.querySelector(".trailer")
+        dr = data.results
+        urlvideo = "https:// www.youtube.com/embed/"
+        listaTrailers.inerHTML = `<article>
+                                    <iframe width="560" height"315" src=${urlvideo + dr.key} </iframe>
+                                  </article>`
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
 
 
-// GET RECOMMENDATIONS
+//GET RECOMMENDATIONS
 
-let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
+ let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
 
 fetch(url_recomendaciones)
     .then(function(response) {
@@ -144,7 +161,7 @@ fetch(url_recomendaciones)
     })
     .catch(function(error) {
         console.log("Error: " + error);
-    })
+    }) 
 
 //FAVORITOS
 let favoritosPeli = []
