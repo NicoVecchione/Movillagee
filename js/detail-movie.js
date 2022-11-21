@@ -83,8 +83,8 @@ fetch(url_plataformas)
         return response.json()
     })
     .then(function(data) {
-        let plataformas = document.querySelector("#plataformas");
         console.log(data);
+        let plataformas = document.querySelector("#plataformas");
         
         if (data.results.AR == null){
             plataformas.innerHTML += "No se encontraron plataformas"
@@ -96,6 +96,24 @@ fetch(url_plataformas)
     .catch(function(error) {
         console.log("Error: " + error);
     })
+
+    
+let url_video = "https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=35664717fe783f635e22f58af930e36f&language=en-US"
+
+fetch(url_video)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        let video = document.querySelector(".trailer")
+        video.innerHTML += `<a href="${data.results.AR.flatrate.link}"><img class="trailer" src="img/boton-ver-trailer.png"alt="trailer"></a>`
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+
 
 //FAVORITOS
 let favoritos = []
