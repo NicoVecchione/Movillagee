@@ -92,36 +92,36 @@ fetch(url_plataformas)
     })
 
 //FAVORITOS
-let favoritos = []
+let favoritosSeries = []
 
 // Esto es para saber si ya hay datos de favoritos
     //Recupero el local storage con la propiedad "pelisfavoritas"
-let recuperoStorage = localStorage.getItem("pelisfavoritas")
+let recuperoStorageSeries = localStorage.getItem("seriesfavoritas")
     // Si hay algo en el local storage, lo tranformo en array y lo guardo en favoritos
-if(recuperoStorage !== null){
-    favoritos = JSON.parse(recuperoStorage) 
+if(recuperoStorageSeries !== null){
+    favoritosSeries = JSON.parse(recuperoStorageSeries) 
 }
     // Para cambiar el texto del boton si el id ya esta en favoritos
 let botonfavs = document.querySelector(".logo-favoritos");
-if (favoritos.includes(id)){
+if (favoritosSeries.includes(id)){
     botonfavs.innerText = "Sacar de Favoritos"
 }
 botonfavs.addEventListener("click", function(){
 
-    if(favoritos.includes(id)){
-        let indicePeli = favoritos.indexOf(id); //Indexof  retorna en que indice del array se encuentra el elemento
-        favoritos.splice(indicePeli,1)  // Splice elimina elementos existentes del array (indice,cantidad elementos a borrar)
+    if(favoritosSeries.includes(id)){
+        let indiceSerie = favoritosSeries.indexOf(id); //Indexof  retorna en que indice del array se encuentra el elemento
+        favoritosSeries.splice(indiceSerie,1)  // Splice elimina elementos existentes del array (indice,cantidad elementos a borrar)
         botonfavs.innerText = "Agregar a Favoritos"
     } else {
-        favoritos.push(id) // Al array de favoritos le sumamos el id de la pelicula que agregamos como favs. 
+        favoritosSeries.push(id) // Al array de favoritos le sumamos el id de la pelicula que agregamos como favs. 
         botonfavs.innerText = "Sacar de Favoritos";
 
     }
     // Guardando datos en el Local Storage. 
         // Primero paso el array de favoritos a formato JSON con .stringify
-    let favs = JSON.stringify(favoritos)
+    let favs = JSON.stringify(favoritosSeries)
         //Con el metodo "setItem" agrego la propiedad "pelisfavoritas" y el valor "favs" que seria el array de favoritos al local storage
-    localStorage.setItem("pelisfavoritas",favs)
+    localStorage.setItem("seriesfavoritas",favs)
     console.log(localStorage)
     
 })

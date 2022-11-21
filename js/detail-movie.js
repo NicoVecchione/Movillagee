@@ -116,34 +116,34 @@ fetch(url_video)
 
 
 //FAVORITOS
-let favoritos = []
+let favoritosPeli = []
 
 // Esto es para saber si ya hay datos de favoritos
     //Recupero el local storage con la propiedad "pelisfavoritas"
-let recuperoStorage = localStorage.getItem("pelisfavoritas")
+let recuperoStoragePelis = localStorage.getItem("pelisfavoritas")
     // Si hay algo en el local storage, lo tranformo en array y lo guardo en favoritos
-if(recuperoStorage !== null){
-    favoritos = JSON.parse(recuperoStorage) 
+if(recuperoStoragePelis !== null){
+    favoritosPeli = JSON.parse(recuperoStoragePelis) 
 }
     // Para cambiar el texto del boton si el id ya esta en favoritos
 let botonfavs = document.querySelector(".logo-favoritos");
-if (favoritos.includes(id)){
+if (favoritosPeli.includes(id)){
     botonfavs.innerText = "Sacar de Favoritos"
 }
 botonfavs.addEventListener("click", function(){
 
-    if(favoritos.includes(id)){
-        let indicePeli = favoritos.indexOf(id);
-        favoritos.splice(indicePeli,1)
+    if(favoritosPeli.includes(id)){
+        let indicePeli = favoritosPeli.indexOf(id);
+        favoritosPeli.splice(indicePeli,1)
         botonfavs.innerText = "Agregar a Favoritos"
     } else {
-        favoritos.push(id) // Al array de favoritos le sumamos el id de la pelicula que agregamos como favs. 
+        favoritosPeli.push(id) // Al array de favoritos le sumamos el id de la pelicula que agregamos como favs. 
         botonfavs.innerText = "Sacar de Favoritos";
 
     }
     // Guardando datos en el Local Storage. 
         // Primero paso el array de favoritos a formato JSON con .stringify
-    let favs = JSON.stringify(favoritos)
+    let favs = JSON.stringify(favoritosPeli)
         //Con el metodo "setItem" agrego la propiedad "pelisfavoritas" y el valor "favs" que seria el array de favoritos al local storage
     localStorage.setItem("pelisfavoritas",favs)
     console.log(localStorage)
