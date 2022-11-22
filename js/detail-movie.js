@@ -144,18 +144,16 @@ fetch(url_recomendaciones)
         }
         capturo.innerHTML = listaRecomendaciones
         
-        let getRecomendaciones = document.querySelector("#button")
-        console.log(getRecomendaciones);
+        let getRecom = document.querySelector("#button")
+        console.log(getRecom);
         let contenedor = document.querySelector(".nom-recom-container") 
         
-        getRecomendaciones.addEventListener("click",function(){
-            
-            if (getRecomendaciones.innerText == "Ver recomendaciones") {
-                contenedor.style.display = "none"
+        getRecom.addEventListener("click",function(){
+            if (getRecom.innerText == "Ver recomendaciones") {
+                contenedor.style.display = "flex"
                 this.innerText = "Ocultar recomendaciones";
-            }else if (getRecomendaciones.innerText == "Ocultar recomendaciones"){
-                
-                contenedor.display = "flex"
+            }else{
+                contenedor.style.display = "none"
                 this.innerText = "Ver recomendaciones"
             }
         })
