@@ -120,8 +120,29 @@ fetch(urlTrailer)
 //GET RECOMMENDATIONS
 
 
+//REVIEWS
+let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
+
+fetch(urlReviews)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        listaReviews = document.querySelector(".reviews")
+        dr = data.results
+        for(let i=0; i<2; i++)
+        listaReviews.inerHTML = `<article class = contenedor-texto >
+                                    <p> De: ${dr[i].author} </p>
+                                    <p> ${dr[i].content}
+                                 </article>`
+    })                          
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
 
 //FAVORITOS
+
 let favoritosPeli = []
 
 // Esto es para saber si ya hay datos de favoritos
@@ -155,3 +176,4 @@ botonfavs.addEventListener("click", function(){
     console.log(localStorage)
     
 })
+

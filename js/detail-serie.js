@@ -91,6 +91,46 @@ fetch(url_plataformas)
         console.log("Error: " + error);
     })
 
+// TRAILER
+let urlTrailer = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=35664717fe783f635e22f58af930e36f&language=en-US`
+
+fetch(urlTrailer)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        listaTrailers = document.querySelector(".trailer")
+        dr = data.results
+        urlvideo = "https://www.youtube.com/embed/"
+        listaTrailers.inerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} </iframe>`
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+//REVIEWS
+let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
+
+fetch(urlReviews)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        listaReviews = document.querySelector(".reviews")
+        dr = data.results
+        for(let i=0; i<2; i++)
+        listaReviews.inerHTML = `<article class = contenedor-texto >
+                                    <p> De: ${dr[i].author} </p>
+                                    <p> ${dr[i].content}
+                                 </article>`
+    })                          
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+
 //FAVORITOS
 let favoritosSeries = []
 
