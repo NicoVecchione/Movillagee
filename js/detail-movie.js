@@ -132,7 +132,7 @@ fetch(url_recomendaciones)
 
         let listaRecomendaciones = []
         console.log(listaRecomendaciones);
-        let capturo = document.querySelector(".nom-recom")
+        let capturo = document.querySelector(".nom-recom-container")
 
         for(let i=0; i<5; i++){
             listaRecomendaciones += `<section class="nom-recom">

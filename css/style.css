@@ -471,9 +471,9 @@ span{
 }
 
 .titulo-genre {
-    font-size: 100px;
+    font-size: 60px;
     justify-content: center;
-    margin-left: 420px;
+    text-align: center;
 }
 
 .generos-container {
@@ -484,7 +484,7 @@ span{
 }
 
 .titulos-genero{
-    font-size: 200px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
 }
@@ -695,4 +695,15 @@ span{
 
 .firulete{
     margin-right: 50px;
+}
+
+.img{
+    width: 100px;
+}
+.nom-recom-container{
+    display:flex;
+    column-gap:15px ;
+}
+#Error{
+    display: none;
 }
