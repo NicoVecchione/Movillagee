@@ -110,7 +110,7 @@ fetch(urlTrailer)
         listaTrailers = document.querySelector(".trailer")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
-        listaTrailers.inerHTML += `<a href="${urlvideo + dr[0].key}"><img class="trailer" src="img/boton-ver-trailer.png"alt="trailer"></a>`
+        listaTrailers.inerHTML += `<a href="${urlvideo + dr[0].key}"><img class="trailer" src="img/boton-ver-trailer.png" alt="trailer"></a>`
         console.log(listaTrailers.inerHTML)
     })
     .catch(function(error) {
@@ -134,23 +134,28 @@ fetch(url_recomendaciones)
         console.log(listaRecomendaciones);
         let capturo = document.querySelector(".nom-recom-container")
 
-        for(let i=0; i<5; i++){
+        for(let i=0; i<4; i++){
             listaRecomendaciones += `<section class="nom-recom">
             <a href= "./detail-movie.html?id=${data.results[i].id}">
                 <img class="img" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}" alt="${data.results[i].title}">
-                <button id="button">${data.results[i].title}</button>
-            </a>
+                </a>
+                <p id="button">(${data.results[i].title})</p>
             </section>`
         }
         capturo.innerHTML = listaRecomendaciones
         
         let getRecomendaciones = document.querySelector("#button")
         console.log(getRecomendaciones);
+        let contenedor = document.querySelector(".nom-recom-container") 
+        
         getRecomendaciones.addEventListener("click",function(){
             
             if (getRecomendaciones.innerText == "Ver recomendaciones") {
+                contenedor.style.display = "none"
                 this.innerText = "Ocultar recomendaciones";
-            }else if (getRecomendaciones.innerText == "Ocultar recomendaciones"){ 
+            }else if (getRecomendaciones.innerText == "Ocultar recomendaciones"){
+                
+                contenedor.display = "flex"
                 this.innerText = "Ver recomendaciones"
             }
         })

@@ -307,6 +307,15 @@ body{
     flex-wrap: wrap;
 }
 
+.section-recomendaciones {
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.nom-recom-container {
+    display: none;
+}
+
 .logo-favoritos{
     height: 50px;
     background-color: rgb(21, 21, 70);
