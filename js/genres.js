@@ -22,3 +22,32 @@ formulario.addEventListener("submit", function(event){
         this.submit()
     }
 })
+
+// GENEROS
+
+let url_genrePelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=35664717fe783f635e22f58af930e36f&language=en-US`
+
+fetch(url_genrePelis)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+
+        let info = data.genres
+
+        let generos = document.querySelector(".generos")
+
+        let peliculas = ""
+
+        for (let i=0; i<data.genres.length; i++){
+            console.log(info[i])
+            peliculas += `<article class="generos-container">
+                                <p class="titulos-genero"><a href="./detail-genres.html?id=${info[i].id}&name=${info[i].name}">${info[i].name}</a></p>
+                          </article>`
+        }
+        generos.innerHTML = peliculas
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })

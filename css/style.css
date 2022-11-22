@@ -462,20 +462,29 @@ span{
 
 .generos {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.titulo-genre {
+    font-size: 100px;
+    justify-content: center;
+    margin-left: 420px;
 }
 
 .generos-container {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .titulos-genero{
-    font-size: 20px;
+    font-size: 200px;
     display: flex;
     justify-content: center;
 }
