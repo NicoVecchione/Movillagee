@@ -90,7 +90,7 @@ fetch(url_plataformas)
             plataformas.innerHTML += "No se encontraron plataformas"
         }else{
             for(let i = 0; i<data.results.AR.flatrate.length; i ++){
-                plataformas.innerHTML += data.results.AR.flatrate[i].provider_name + ", " + `https://image.tmdb.org/t/p/original`
+                plataformas.innerHTML += data.results.AR.flatrate[i].provider_name + ", "
             }
         }
     })
@@ -121,47 +121,7 @@ fetch(urlTrailer)
 
 //GET RECOMMENDATIONS
 
- let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
 
-fetch(url_recomendaciones)
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(data) {
-        console.log(data);
-        console.log(data.results);
-
-        let listaRecomendaciones = document.querySelector("#recomendaciones")
-        console.log(listaRecomendaciones);
-
-        let lista = ""
-        for (let i=0; i<6 ; i++){
-            lista += `  <li id="peli-recomendada">
-                            <img id="img-pelis" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}">
-                            <h4 id="nom-pelis">
-                                <a href="./detail-movie.html">
-
-                                </a>
-                            </h4>
-                        </li>`
-        }
-        listaRecomendaciones.innerHTML = lista
-
-        let getRecomendaciones = document.querySelector("#button")
-        console.log(getRecomendaciones);
-        getRecomendaciones.addEventListener("click",function(){
-            
-            if (getRecomendaciones.innerText == "Ver recomendaciones") {
-                this.innerText = "Ocultar recomendaciones";
-            }else{
-                listaRecomendaciones.style.display = "none"
-                this.innerText = "Ver recomendaciones"
-            }
-        })
-    })
-    .catch(function(error) {
-        console.log("Error: " + error);
-    }) 
 
 //FAVORITOS
 let favoritosPeli = []

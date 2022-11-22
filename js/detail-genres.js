@@ -26,23 +26,36 @@ formulario.addEventListener("submit", function(event){
 // DETALLE GENEROS
 
 let queryString = location.search;
+
 let queryStringObj = new URLSearchParams(queryString);
+
 let id = queryStringObj.get('id');
+console.log(id);
 
-let url_pelis = "https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
+let url_generos = `https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
-fetch(url_pelis)
+fetch(url_generos)
     .then(function(response) {
         return response.json()
     })
     .then(function(data) {
         console.log(data);
-        let titulo_genero = document.querySelector(".titulo-genero")
-        titulo_genero.innerText = data.results
+        let generos = document.querySelector(".genero-accion1")
+        let peliculas = ""
+
+        for (let i=0; i<data.results.length; i++){
+            console.log(data.results[i]);
+            peliculas += `<article class="peli-accion">
+                                <a href="detail-movie.html?id=${data.results[i].id}">
+                                    <img class="img-accion" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}">
+                                    <p id="titulo-peli" ${data.results[i].title}><a href=".detail-movie.html?id=${data.results[i].id}"></a></p>
+                                </a>
+                          </article>`
+        }
+        generos.innerHTML = peliculas
     })
     .catch(function(error) {
         console.log("Error: " + error);
     })
 
-
-let url_series = "https://api.themoviedb.org/3/discover/tv?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0"
+// ERROR
