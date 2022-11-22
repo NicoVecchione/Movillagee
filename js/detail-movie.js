@@ -110,7 +110,8 @@ fetch(urlTrailer)
         listaTrailers = document.querySelector(".trailer")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
-        listaTrailers.inerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} </iframe>`
+        listaTrailers.inerHTML += `<a href="${urlvideo + dr[0].key}"><img class="trailer" src="img/boton-ver-trailer.png"alt="trailer"></a>`
+        console.log(listaTrailers.inerHTML)
     })
     .catch(function(error) {
         console.log("Error: " + error);
@@ -119,6 +120,44 @@ fetch(urlTrailer)
 
 //GET RECOMMENDATIONS
 
+let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
+
+fetch(url_recomendaciones)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        console.log(data.results);
+
+        let listaRecomendaciones = []
+        console.log(listaRecomendaciones);
+        let capturo = document.querySelector(".nom-recom")
+
+        for(let i=0; i<5; i++){
+            listaRecomendaciones += `<section class="nom-recom">
+            <a href= "./detail-movie.html?id=${data.results[i].id}">
+                <img class="img" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}" alt="${data.results[i].title}">
+                <button id="button">${data.results[i].title}</button>
+            </a>
+            </section>`
+        }
+        capturo.innerHTML = listaRecomendaciones
+        
+        let getRecomendaciones = document.querySelector("#button")
+        console.log(getRecomendaciones);
+        getRecomendaciones.addEventListener("click",function(){
+            
+            if (getRecomendaciones.innerText == "Ver recomendaciones") {
+                this.innerText = "Ocultar recomendaciones";
+            }else if (getRecomendaciones.innerText == "Ocultar recomendaciones"){ 
+                this.innerText = "Ver recomendaciones"
+            }
+        })
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
 
 //REVIEWS
 let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
@@ -132,9 +171,9 @@ fetch(urlReviews)
         listaReviews = document.querySelector(".reviews")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.inerHTML = `<article class = contenedor-texto >
-                                    <p> De: ${dr[i].author} </p>
-                                    <p> ${dr[i].content}
+        listaReviews.inerHTML += `<section class="reviews">
+                                    <p> De: ${dr[i].author}</p>
+                                    <p> ${dr[i].content}</p>
                                  </article>`
     })                          
     .catch(function(error) {
