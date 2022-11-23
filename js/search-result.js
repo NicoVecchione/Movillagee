@@ -1,6 +1,4 @@
 // FORMULARIO
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get("Busqueda");
 var busqueda=window.location.search?.split("=")[1]
 console.log (busqueda)
 let contenedor=document.querySelector(".populares")
