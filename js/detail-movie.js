@@ -150,10 +150,10 @@ fetch(url_recomendaciones)
         
         getRecom.addEventListener("click",function(){
             if (getRecom.innerText == "Ver recomendaciones") {
-                contenedor.style.display = "flex"
+                contenedor.style.display = "flex";
                 this.innerText = "Ocultar recomendaciones";
             }else{
-                contenedor.style.display = "none"
+                contenedor.style.display = "none";
                 this.innerText = "Ver recomendaciones"
             }
         })
