@@ -122,7 +122,7 @@ fetch(urlReviews)
         listaReviews = document.querySelector(".reviews-serie")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.innerHTML = `<article class = "reviews-serie" >
+        listaReviews.innerHTML += `<article class = "reviews-serie" >
                                     <h2>Reseñas</h2>
                                     <p><span>De: </span>${dr[i].author} </p>
                                     <p><span>Reseña: </span>${dr[i].content}
