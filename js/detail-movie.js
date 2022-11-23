@@ -107,10 +107,10 @@ fetch(urlTrailer)
     })
     .then(function(data) {
         console.log(data);
-        listaTrailers = document.querySelector(".trailer")
+        listaTrailers = document.querySelector(".trailer-movie")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
-        listaTrailers.innerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} allowfullscreen </iframe>`
+        listaTrailers.innerHTML = `<iframe width="300" height"300" src=${urlvideo + dr[0].key} allowfullscreen </iframe>`
         console.log(listaTrailers.innerHTML)
     })
     .catch(function(error) {
@@ -136,10 +136,10 @@ fetch(url_recomendaciones)
 
         for(let i=0; i<4; i++){
             listaRecomendaciones += `<section class="nom-recom">
-            <a href= "./detail-movie.html?id=${data.results[i].id}">
-                <img class="img" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}" alt="${data.results[i].title}">
+                <a href= "./detail-movie.html?id=${data.results[i].id}">
+                    <img class="img" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}" alt="${data.results[i].title}">
+                    <button id="button">(${data.results[i].title})</button>
                 </a>
-                <p id="button">(${data.results[i].title})</p>
             </section>`
         }
         capturo.innerHTML = listaRecomendaciones
@@ -174,10 +174,10 @@ fetch(urlReviews)
         listaReviews = document.querySelector(".reviews")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.innerHTML += `<article class="reviews">
-                                    <p> De: ${dr[i].author}</p>
-                                    <p> Reseña: ${dr[i].content}</p>
-                                 </article>`
+        listaReviews.innerHTML += `<section class="reviews">
+                                    <p><span>Reseña de: </span>${dr[i].author}</p>
+                                    <p><span>Reseña: </span>${dr[i].content}</p>
+                                 </section>`
     })                          
     .catch(function(error) {
         console.log("Error: " + error);

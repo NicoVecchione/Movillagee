@@ -100,7 +100,7 @@ fetch(urlTrailer)
     })
     .then(function(data) {
         console.log(data);
-        listaTrailers = document.querySelector(".trailer")
+        listaTrailers = document.querySelector(".trailer-serie")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
         listaTrailers.innerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} allowfullscreen </iframe>`
@@ -119,12 +119,13 @@ fetch(urlReviews)
     })
     .then(function(data) {
         console.log(data);
-        listaReviews = document.querySelector(".reviews")
+        listaReviews = document.querySelector(".reviews-serie")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.innerHTML = `<article class = "reviews" >
-                                    <p> De: ${dr[i].author} </p>
-                                    <p> Reseña: ${dr[i].content}
+        listaReviews.innerHTML = `<article class = "reviews-serie" >
+                                    <h2>Reseñas</h2>
+                                    <p><span>De: </span>${dr[i].author} </p>
+                                    <p><span>Reseña: </span>${dr[i].content}
                                  </article>`
     })                          
     .catch(function(error) {

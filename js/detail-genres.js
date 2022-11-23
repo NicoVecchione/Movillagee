@@ -41,14 +41,16 @@ fetch(url_generosPelis)
     })
     .then(function(data) {
         console.log(data);
-        let generos = document.querySelector(".genero-accion1")
+        let generos = document.querySelector(".genero-accion")
         let peliculas = ""
 
-        for (let i=0; i<data.results.length; i++){
+        for (let i=0; i<15; i++){
             console.log(data.results[i])
             peliculas += `<article class="peli-accion">
-                                <a href="detail-movie.html?id=${data.results[i].id}"> <img class="img-accion" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}"></a>
-                                    <p id="titulo-peli" ${data.results[i].original_title}><a href=".detail-movie.html?id=${data.results[i].id}"></a></p>
+                                <a href="detail-movie.html?id=${data.results[i].id}">
+                                    <img class="img-accion" src="https://image.tmdb.org/t/p/original${data.results[i].poster_path}">
+                                </a>
+                                    <p id="titulo-peli">${data.results[i].title}</p>
                           </article>`
         }
         console.log(peliculas)

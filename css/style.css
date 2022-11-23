@@ -275,6 +275,7 @@ body{
 
 .contenedor-padre{
     display: flex;
+    height: 800px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -299,6 +300,7 @@ body{
 }
 
 .contenedor-texto{
+    height: 800px;
     width: 80%;
     margin-left: -70px;
     margin-right: 30px;
@@ -308,8 +310,12 @@ body{
 }
 
 .section-recomendaciones {
-    margin-left: 30px;
-    margin-top: 45px;
+    margin-top: 100px;
+}
+
+.contenedor-reseñas {
+    height: 100px;
+
 }
 
 .nom-recom-container2 {
@@ -335,11 +341,20 @@ span{
     color: gray;
 }
 
-.trailer{
-    width: 100%;
+.trailer-movie{
+    width: 80px;
     height: 40px;
-    margin-left: -10px;
-    margin-top: 5px;
+    margin-top: -15px;
+    margin-left: 450px
+}
+
+.trailer-serie {
+    margin-left: 600px;
+    margin-top: -200px
+}
+
+.reviews-serie {
+    margin-top: 50px;
 }
 
 .titulo{
@@ -369,18 +384,20 @@ span{
     font-size: 40px;
 }
 
-.genero-accion1{
+.genero-accion{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: auto;
-    margin: 30px;
-    gap: 15px;
-    flex-wrap: wrap;
+    height: 200px;
     margin-top: 50px;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-
+.contenedor-detalleGenero {
+    height: 900px;
+}
 
 .peli-accion{
     height: 200px;
@@ -653,10 +670,11 @@ span{
     }
     
 /* Detail Genres */
-    .genero-accion1,.genero-accion2 {
+    .genero-accion,.genero-accion {
         flex-wrap: wrap;
         height: 200vh;
         margin: 7%;
+        margin: 20px;
         
     }
     .titulo-genero{
