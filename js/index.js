@@ -13,7 +13,7 @@ formulario.addEventListener("submit", function(event){ // USO DE SUBMIT
             buscador.addEventListener("focus", function(){ //USO DEL FOCUS (al salir del campo..)
                 error.innerText = null
     // Que tenga al menos 3 caracteres
-    }) } else if (buscador.value.length < 3 && buscador.value !== ""){
+    }) } else if (buscador.value.length < 3){
         error.innerText= "Debe introducir minimo 3 caracteres";
             // Mensaje de error desaparece
             buscador.addEventListener("focus", function(){

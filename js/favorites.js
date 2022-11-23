@@ -63,7 +63,7 @@ function buscarYMostrarPelis(id){
 
 }
 //FAVORITOS SERIES
- let recuperoStorageSeries = localStorage.getItem("seriesfavoritas")
+let recuperoStorageSeries = localStorage.getItem("seriesfavoritas")
 let series = JSON.parse(recuperoStorageSeries)
 console.log(series)
 
