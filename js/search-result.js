@@ -35,7 +35,7 @@ formulario.addEventListener("submit", function(event){
             buscador.addEventListener("focus", function(){
                 error.innerText = null
     // Que tenga al menos 3 caracteres
-    }) } else if (buscador.value.length < 3 && buscador.value !== ""){
+    }) } else if (buscador.value.length < 3){
         error.innerText= "Debe introducir minimo 3 caracteres";
             // Mensaje de error desaparece
             buscador.addEventListener("focus", function(){
