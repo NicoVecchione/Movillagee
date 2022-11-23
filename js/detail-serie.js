@@ -92,7 +92,7 @@ fetch(url_plataformas)
     })
 
 // TRAILER
-let urlTrailer = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=35664717fe783f635e22f58af930e36f&language=en-US`
+let urlTrailer = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=35664717fe783f635e22f58af930e36f&language=en-US`
 
 fetch(urlTrailer)
     .then(function(response) {
@@ -103,14 +103,15 @@ fetch(urlTrailer)
         listaTrailers = document.querySelector(".trailer")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
-        listaTrailers.inerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} </iframe>`
+        listaTrailers.innerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} allowfullscreen </iframe>`
+        console.log(listaTrailers.innerHTML)
     })
     .catch(function(error) {
         console.log("Error: " + error);
     })
 
 //REVIEWS
-let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
+let urlReviews = `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=35664717fe783f635e22f58af930e36f&language=en-US&page=1`
 
 fetch(urlReviews)
     .then(function(response) {
@@ -121,9 +122,9 @@ fetch(urlReviews)
         listaReviews = document.querySelector(".reviews")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.inerHTML = `<article class = contenedor-texto >
+        listaReviews.innerHTML = `<article class = "reviews" >
                                     <p> De: ${dr[i].author} </p>
-                                    <p> ${dr[i].content}
+                                    <p> Reseña: ${dr[i].content}
                                  </article>`
     })                          
     .catch(function(error) {

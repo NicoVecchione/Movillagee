@@ -110,8 +110,8 @@ fetch(urlTrailer)
         listaTrailers = document.querySelector(".trailer")
         dr = data.results
         urlvideo = "https://www.youtube.com/embed/"
-        listaTrailers.inerHTML += `<a href="${urlvideo + dr[0].key}"><img class="trailer" src="img/boton-ver-trailer.png" alt="trailer"></a>`
-        console.log(listaTrailers.inerHTML)
+        listaTrailers.innerHTML = `<iframe width="560" height"315" src=${urlvideo + dr[0].key} allowfullscreen </iframe>`
+        console.log(listaTrailers.innerHTML)
     })
     .catch(function(error) {
         console.log("Error: " + error);
@@ -132,7 +132,7 @@ fetch(url_recomendaciones)
 
         let listaRecomendaciones = []
         console.log(listaRecomendaciones);
-        let capturo = document.querySelector(".nom-recom-container")
+        let capturo = document.querySelector(".nom-recom-container2")
 
         for(let i=0; i<4; i++){
             listaRecomendaciones += `<section class="nom-recom">
@@ -146,7 +146,7 @@ fetch(url_recomendaciones)
         
         let getRecom = document.querySelector("#button")
         console.log(getRecom);
-        let contenedor = document.querySelector(".nom-recom-container") 
+        let contenedor = document.querySelector(".nom-recom-container2") 
         
         getRecom.addEventListener("click",function(){
             if (getRecom.innerText == "Ver recomendaciones") {
@@ -174,9 +174,9 @@ fetch(urlReviews)
         listaReviews = document.querySelector(".reviews")
         dr = data.results
         for(let i=0; i<2; i++)
-        listaReviews.inerHTML += `<section class="reviews">
+        listaReviews.innerHTML += `<article class="reviews">
                                     <p> De: ${dr[i].author}</p>
-                                    <p> ${dr[i].content}</p>
+                                    <p> Reseña: ${dr[i].content}</p>
                                  </article>`
     })                          
     .catch(function(error) {
