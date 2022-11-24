@@ -728,3 +728,21 @@ span{
 #Error{
     display: none;
 }
+
+.mensajeBuscador{
+    flex-wrap:wrap;
+    display: flex;
+    align-items: center;
+    color:  rgb(236, 189, 118);
+    font-size: 20px;
+    height: 9vh;
+    text-decoration: none;
+    font-family:'Bebas Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.seccionBuscador{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}

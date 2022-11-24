@@ -173,9 +173,9 @@ fetch(urlReviews)
         console.log(data);
         listaReviews = document.querySelector(".reviews")
         dr = data.results
-        for(let i=0; i<2; i++)
+        for(let i=0; i<1; i++)
         listaReviews.innerHTML += `<section class="reviews">
-                                    <h2>Reseñas</h2>
+                                    <h2>Reseña</h2>
                                     <p><span>Reseña de: </span>${dr[i].author}</p>
                                     <p><span>Reseña: </span>${dr[i].content}</p>
                                  </section>`
